@@ -87,6 +87,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="10"
+            android:onClick="raw_file_click"
             android:text="Raw file" />
 
         <Space

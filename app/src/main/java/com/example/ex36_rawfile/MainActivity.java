@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText etText;
     private final String FILENAME = "rawtest.txt";
     private int resourceId;
-    private String fileName = FILENAME.substring(0, FILENAME.length() - 4);
+    private String fileName;
 
 
     @Override
@@ -38,8 +38,8 @@ public class MainActivity extends AppCompatActivity {
         tvText = findViewById(R.id.tvText);
         etText = findViewById(R.id.etText);
 
-        resourceId = this.getResources().getIdentifier(fileName, "raw", this.getPackageName());
-
+        fileName = FILENAME.substring(0, FILENAME.length() - 4);
+        resourceId = getResources().getIdentifier(fileName, "raw", getPackageName());
     }
 
     public void raw_file_click(View view){
